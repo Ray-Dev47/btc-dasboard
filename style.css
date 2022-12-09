@@ -36,11 +36,15 @@
 }
 
 html{
+    font-size: 12px;
+}
+
+body{
     background: var(--color-light);
     font-family: poppins, sans-serif;
     min-height: 100vh;
     color: var(--color-dark);
-}
+} 
 
 img{
     width: 100%;
@@ -68,7 +72,7 @@ h5{
 }
 
 h6{
-    font-size: 7.6rem;
+    font-size: 0.76rem;
 }
 
 p{
@@ -135,7 +139,7 @@ nav{
 }
 
 nav .container{
-    display: flex;
+    display: flex; 
     justify-content: space-between;
     align-items: center;
     position: relative;
@@ -153,7 +157,7 @@ nav .search-bar{
     padding: var(--padding-2) var(--card-padding);
     color: var(--color-gray-light);
     display: flex;
-    align-items: center;
+    align-items: center; 
     gap: 1rem;
     width: 32vw;
     position: absolute;
@@ -177,7 +181,7 @@ nav .profile-area{
     justify-content: space-between;
     gap: 4rem;
 }
-
+ 
 nav .profile-area .theme-btn{
     display: flex;
     background: var(--color-light);
@@ -360,7 +364,7 @@ main section.middle .cards .card:nth-child(3){
 main section.middle .card .top{
     display: flex;
     justify-content: space-between;
-    /* align-items: center;  */
+    align-items: center; 
 }
 
 main section.middle .card .top .left{
@@ -376,5 +380,110 @@ main section.middle .card .top .left h2{
 main section.middle .card .top .left img{
     width: 2.3rem;
     height: 2.3rem;
+    border: 1px solid white;
+    border-radius: var(--border-radius-2);
+    padding: 0.4rem;
 }
 
+main section.middle .card .top img.right{
+    width: 3.5rem;
+}
+
+main section.middle .card .middle{
+    display: flex;
+    justify-content: space-between;
+}
+
+main section.middle .card .middle .chip{
+    width: 3.5rem ;
+}
+
+main section.middle .card  .bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;  
+} 
+
+main section.middle .card  .bottom .right{
+    display: flex;
+    gap: 2rem;
+}
+
+
+/* monthly report */
+main .monthly-report{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+main .monthly-report h1{
+    font-weight: 700;
+    font-size: 1.8rem;
+    
+}
+
+
+/* fast payment */
+main .fast-payment{
+    margin-top: 2rem;
+    display: flex;
+    align-self: center;
+    gap: 2rem;
+}
+
+main .fast-payment .badges{
+    display: flex;
+    gap: 1rem;
+    align-self: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+main .fast-payment .badge span{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+
+main .fast-payment .badge{
+    padding: 0.6rem var(--card-padding);
+    background: var(--color-white);  
+    border-radius: var(--border-radius-2);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 300ms ease;
+}
+
+main .fast-payment .badge:hover{
+    box-shadow: 0 0 1.5rem var(--color-primary-light);
+    cursor: pointer;
+}
+ 
+main .fast-payment .badge:first-child span{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    height: fit-content;
+    font-size: 1.5rem;
+}
+
+main .fast-payment .badge div{
+    display: flex;
+    gap: 2rem;
+    align-self: center; 
+}
+
+
+/* chart */
+
+canvas#chart{
+    background: var(--color-white);
+    max-width: 100%;
+    margin-top: 2rem;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+}
