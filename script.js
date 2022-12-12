@@ -25,3 +25,27 @@ new Chart(chart, {
     }
 })
 
+// show or hide toggle buttons
+const menuBtn = document.getElementById('menu-btn')
+const closeBtn = document.getElementById('close-btn')
+const sidebar = document.querySelector('aside')
+
+menuBtn.addEventListener('click', function(){
+    sidebar.style.display = 'block'
+})
+
+closeBtn.addEventListener('click', function(){
+    sidebar.style.display = 'none'
+})
+
+
+// light/ dark mode
+const themeBtn = document.querySelector('.theme-btn')
+
+themeBtn.addEventListener('click', function(){
+    document.body.classList.toggle('dark-theme');
+
+
+    themeBtn.querySelector('span:first-child').classList.toggle('active');
+    themeBtn.querySelector('span:last-child').classList.toggle('active');
+})
