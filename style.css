@@ -361,7 +361,7 @@ main section.middle .cards .card{
     justify-content: space-between;
     box-shadow: 0 2rem 3rem var(--color-danger-light);
     transition: all 300ms ease;
-    max-width: 22rem;
+    max-width: 27rem;
 }
 
 main section.middle .cards .card:hover{
@@ -632,13 +632,20 @@ main .recent-transactions .card-details .card{
     main aside{
         position: fixed;
         top: 0;
-        left: 0;
+        left: -100%;
         z-index: 3;
         background: var(--color-white);
         width: 22rem;
         height: 100vh;
         box-shadow: 2rem 0 2rem var(--color-primary-light);
         display: none;
+        animation: showSidebar 400ms ease forwards;
+    }
+
+    @keyframes showSidebar {
+        to {
+            left: 0;
+        }
     }
 
     main aside button#close-btn{
@@ -680,6 +687,24 @@ main .recent-transactions .card-details .card{
 
 /* mobile phones */
 @media screen and (max-width: 600px){
-     
+     nav .profile-area{
+        gap: 2.6rem;
+     }
+
+     nav .profile h5,
+     nav .profile span{
+        display: none
+     }
+
+     main section.middle .cards{
+         grid-template-columns: 1fr;
+     } 
+
+     main section.middle .fast-payment{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 3rem;
+        gap: 1.4rem;
+     }
     
 }
